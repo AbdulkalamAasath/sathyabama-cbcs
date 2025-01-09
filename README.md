@@ -1,4 +1,7 @@
 # Sathyabama University CBCS Elective Subjects Management System
+![image](https://github.com/user-attachments/assets/a2315ca0-7ae1-4340-8c98-69614927ee24)
+![image](https://github.com/user-attachments/assets/f6b98cdc-d8a9-4a5f-9260-85d568f29a99)
+
 
 ## Overview
 
