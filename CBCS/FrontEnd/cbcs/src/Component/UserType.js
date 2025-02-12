@@ -6,7 +6,7 @@ import Chatbot from './Chatbot'; // Import the Chatbot component
 
 const UserType = () => {
   useEffect(() => {
-    alert("Please note that there might be a 50-second wait during your first sign-in on Render Free Hosting");
+  
   }, []);
 
   return (
