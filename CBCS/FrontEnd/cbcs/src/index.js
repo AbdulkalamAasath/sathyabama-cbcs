@@ -8,6 +8,8 @@ import { HodAuthContextProvider } from './Context/HodAuthContext';
 import { StaffAuthContextProvider } from './Context/StaffAuthContext';
 import {CoeAuthContextProvider} from './Context/CoeAuthContext'
 import { DeanAuthContextProvider } from './Context/DeanAuthContext';
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
