@@ -12,7 +12,7 @@ const CoeTable = ({ Dept }) => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`https://sathyabama-cbcs.onrender.com/cbcs/COE/getstudinfo`, {
+      const response = await fetch(`https://sathyabama-cbcs-dxbn.vercel.app/cbcs/COE/getstudinfo`, {
         method: 'POST',
         body: JSON.stringify(ip),
         headers: {
