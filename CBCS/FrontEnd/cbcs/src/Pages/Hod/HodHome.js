@@ -19,7 +19,7 @@ const HodHome = () => {
   useEffect(() =>
   {
   const fetchcourse = async() =>{
-  const response = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/hod/course',
+  const response = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/hod/course',
   {headers:{'Authorization':`Bearer ${HOD.token}`}})
   const json = await response.json()
   console.log(json)

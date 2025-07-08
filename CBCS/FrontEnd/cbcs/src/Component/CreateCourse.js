@@ -17,7 +17,7 @@ const CreateCourse = () => {
     e.preventDefault();
     const course = { CourseName, Coordinator, ProvidedBy, Seats };
 
-    const response = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/hod/create', {
+    const response = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/hod/create', {
       method: 'POST',
       body: JSON.stringify(course),
       headers: {
@@ -44,7 +44,7 @@ const CreateCourse = () => {
 
   useEffect(() => {
     const fetchStafs = async () => {
-      const StafInfo = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/hod/Stafs', {
+      const StafInfo = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/hod/Stafs', {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${HOD.token}`

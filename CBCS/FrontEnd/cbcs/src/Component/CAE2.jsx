@@ -109,7 +109,7 @@ const CAE2 = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Attendence/' + staff.course_id, {
+        const response = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Attendence/' + staff.course_id, {
           headers: { 'Authorization': `Bearer ${staff.token}` }
         });
         if (response.ok) {
@@ -133,7 +133,7 @@ const CAE2 = () => {
     e.preventDefault();
     try {
       const info = { CAE1: true, CAE2: true, SEM: false };
-      const response = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Marks/given/staffinfo/' + staff.id, {
+      const response = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Marks/given/staffinfo/' + staff.id, {
         method: 'POST',
         body: JSON.stringify(info),
         headers: {
@@ -150,7 +150,7 @@ const CAE2 = () => {
       await Promise.all(
         Object.entries(Marks).map(async ([studentId, marks]) => {
           const info = { Marks: marks };
-          const response = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Marks/given/CAE2/' + studentId, {
+          const response = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Marks/given/CAE2/' + studentId, {
             method: 'POST',
             body: JSON.stringify(info),
             headers: {

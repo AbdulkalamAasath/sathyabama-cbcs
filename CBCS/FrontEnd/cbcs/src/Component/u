@@ -19,7 +19,7 @@ useEffect(()=>
 {
   const fetchdata = async() =>
   {
-    const responce = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Attendence/'+staff.course_id,
+    const responce = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Attendence/'+staff.course_id,
     {headers:{'Authorization':`Bearer ${staff.token}`}})
     const json = await responce.json()
     console.log(json)

@@ -29,7 +29,7 @@ const AttendanceSheet = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Attendence/' + staff.course_id, {
+        const response = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Attendence/' + staff.course_id, {
           headers: { 'Authorization': `Bearer ${staff.token}` }
         });
         const json = await response.json();
@@ -38,7 +38,7 @@ const AttendanceSheet = () => {
           setFilteredData(json);
           setDates([...new Set(json.flatMap(value => value.Attendence.map(v => v.Date)))]);
         }
-        const resDate = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Date/' + staff.id, {
+        const resDate = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Date/' + staff.id, {
           headers: { 'Authorization': `Bearer ${staff.token}` }
        
         });
@@ -95,7 +95,7 @@ const AttendanceSheet = () => {
 
     try {
       const Date = { "Date": formattedDate.toString(), "Id": staff.id };
-      const response = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Attendence/Given', {
+      const response = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Attendence/Given', {
         method: 'POST',
         body: JSON.stringify(Date),
         headers: {
@@ -109,7 +109,7 @@ const AttendanceSheet = () => {
       await Promise.all(
         Object.entries(attendance).map(([studentId, isPresent]) => {
           const course = { "Date": formattedDate.toString(), present: isPresent, Id: staff.id };
-          return fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Attendence/Given/' + studentId, {
+          return fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Attendence/Given/' + studentId, {
             method: 'POST',
             body: JSON.stringify(course),
             headers: {
@@ -123,7 +123,7 @@ const AttendanceSheet = () => {
       await Promise.all(
         Object.entries(attendance).map(([studentId, isPresent]) => {
           const course = { "Date": formattedDate.toString(), present: isPresent, Id: staff.id };
-          return fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/staf/Attendence/student/given/' + studentId, {
+          return fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/staf/Attendence/student/given/' + studentId, {
             method: 'POST',
             body: JSON.stringify(course),
             headers: {

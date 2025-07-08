@@ -6,7 +6,7 @@ const StudentInfo = ({ user }) => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch(`https://sathyabama-cbcs-dxbn.vercel.app/cbcs/course/${user.user_id}`, {
+                const response = await fetch(`https://sathyabama-cbcs-backend1.vercel.app/cbcs/course/${user.user_id}`, {
                     headers: { 'Authorization': `Bearer ${user.token}` }
                 });
                 if (!response.ok) {

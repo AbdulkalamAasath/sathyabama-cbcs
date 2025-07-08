@@ -15,7 +15,7 @@ const Course = () => {
 
     useEffect(() => {
         const fetchCourse = async () => {
-            const response = await fetch('https://sathyabama-cbcs-dxbn.vercel.app/cbcs/course/', {
+            const response = await fetch('https://sathyabama-cbcs-backend1.vercel.app/cbcs/course/', {
                 headers: { 'Authorization': `Bearer ${user.token}` }
             });
             const json = await response.json();
