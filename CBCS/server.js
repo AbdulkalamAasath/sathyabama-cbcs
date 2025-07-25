@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const app = express()GGGGGGG
+const app = express()
 const mongoose = require('mongoose')
 const userRoute = require('./BackEnd/Routes/User')
 const courseRoute = require('./BackEnd/Routes/CourseRoute')
